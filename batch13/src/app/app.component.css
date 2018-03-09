@@ -1,0 +1,61 @@
+header{
+clear: both;
+background-color: skyblue;
+height: 100px;
+}
+
+header .logo{
+	float: left;;
+	width:20%;
+}
+header .logo img{
+	width:100px;
+}
+
+header .title{
+	float: left;
+	width: 80%;
+}
+
+
+nav{
+	clear: both;
+	background-color: tomato;
+height: 60px;
+
+margin-top: -25px;
+
+}
+nav ul{
+
+}
+nav ul li {
+	float: left;
+	list-style-type: none;
+	margin: 14px 0;
+	font-size: 30px;
+}
+
+nav ul li a {
+	padding: 10px;
+	color: white;
+	text-decoration: none;
+}
+nav ul li a:hover {
+	text-decoration: underline;
+	background-color: skyblue;
+	border-radius: 5px;
+}
+
+#content{
+	clear: both;
+	background-color: #eee;
+	margin: 0;
+	min-height: 500px;
+	padding: 10px;
+}
+footer{
+	clear: both;
+	background-color: skyblue;
+	text-align: center;
+}
