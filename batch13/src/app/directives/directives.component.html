@@ -1,0 +1,56 @@
+<p>
+  directives works!
+</p>
+
+<pre>
+	
+	{{fname}}
+	{{lname}}
+	{{age}}
+	{{fruits}}
+</pre>
+
+<div (click)="callMe()" > this is click </div>
+<div (mouseover)="callMe()" > this is mouserover </div>
+<div (mouseout)="callMe()" > this is mouseout </div>
+<div (mouseenter)="callMe()" > this is mouseenter </div>
+<div (mouseleave)="callMe()" > this is mouseleave </div>
+<div (mousemove)="callMe()" > this is mousemove </div>
+<div (dblclick)="callMe()" > this is dblclick </div>
+
+
+<pre>
+<input type="text" name="gn" [(ngModel)]="gn" (click)="callMe()" placeholder="click" >
+<input type="text" name="gn" [(ngModel)]="gn" (focus)="callMe()" placeholder="focus" >
+<input type="text" name="gn" [(ngModel)]="gn" (blur)="callMe()" placeholder="blur" >
+<input type="text" name="gn" [(ngModel)]="gn" (change)="callMe()" placeholder="change" >
+<input type="text" name="gn" [(ngModel)]="gn" (copy)="callMe()" placeholder="copy" >
+<input type="text" name="gn" [(ngModel)]="gn" (paste)="callMe()" placeholder="paste" >
+<input type="text" name="fname" [(ngModel)]="fname" (cut)="callMe()" placeholder="cut" >
+</pre>
+
+<p *ngIf="fname == 'qshore'"> this is if</p>
+<p [hidden]="fname == 'qshore'"> this is hidden</p>
+
+<p *ngFor="let fruit of fruits"> {{fruit}} </p>
+
+<ol >
+	<li *ngFor="let fruit of fruits"> {{fruit}} </li>
+</ol>
+
+<select >
+	<option *ngFor="let fruit of fruits"> {{fruit}} </option>
+</select>
+
+<table border="1">
+	<tr *ngFor="let fruit of fruits">
+		<td> {{fruit}}</td>
+	</tr>
+</table>
+<p [ngSwitch]="fname">
+	<span *ngSwitchCase = "'qshore'"> this is qshore</span>
+	<span *ngSwitchCase = "'js'"> this is js</span>
+	<span *ngSwitchCase = "'tech'"> this is tech</span>
+	<span *ngSwitchCase = "'angular'"> this is angular</span>
+	<span *ngSwitchDefault> this is default</span>
+</p>
