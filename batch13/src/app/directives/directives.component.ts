@@ -25,4 +25,7 @@ export class DirectivesComponent implements OnInit {
   	console.log(this.count);
   	this.count++
   }
+  dircLogic(){
+    alert('custom directive componenet logic');
+  }
 }

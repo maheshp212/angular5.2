@@ -11,6 +11,8 @@ import { VariablesComponent } from './variables/variables.component';
 import { DirectivesComponent } from './directives/directives.component';
 import { FormStatesComponent } from './form-states/form-states.component';
 import { ObjectFormsComponent } from './object-forms/object-forms.component';
+import { AttrDirective } from './attr.directive';
+import { ClassDirective } from './class.directive';
 
 //angular.modue('myAPp', [ngROuter])
 
@@ -41,7 +43,9 @@ const routes:Routes = [
     VariablesComponent,
     DirectivesComponent,
     FormStatesComponent,
-    ObjectFormsComponent
+    ObjectFormsComponent,
+    AttrDirective,
+    ClassDirective
   ],
   imports: [
     BrowserModule,

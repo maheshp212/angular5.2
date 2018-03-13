@@ -18,5 +18,7 @@ export class VariablesComponent implements OnInit {
 
   ngOnInit() {
   }
-
+  logic(){
+    alert('variable compoent');
+  }
 }
