@@ -13,6 +13,10 @@ import { FormStatesComponent } from './form-states/form-states.component';
 import { ObjectFormsComponent } from './object-forms/object-forms.component';
 import { AttrDirective } from './attr.directive';
 import { ClassDirective } from './class.directive';
+import { PipesComponent } from './pipes/pipes.component';
+import { HexaPipe } from './hexa.pipe';
+import { ParamsPipe } from './params.pipe';
+import { LifeCycleComponent } from './life-cycle/life-cycle.component';
 
 //angular.modue('myAPp', [ngROuter])
 
@@ -33,7 +37,9 @@ const routes:Routes = [
   {path:'variables', component:VariablesComponent},
   {path:'directives', component:DirectivesComponent},
   {path:'form-states', component:FormStatesComponent},
-	{path:'object-form', component:ObjectFormsComponent},
+  {path:'object-form', component:ObjectFormsComponent},
+  {path:'pipes', component:PipesComponent},
+	{path:'life-cycle', component:LifeCycleComponent},
 ];
 
 @NgModule({
@@ -45,7 +51,11 @@ const routes:Routes = [
     FormStatesComponent,
     ObjectFormsComponent,
     AttrDirective,
-    ClassDirective
+    ClassDirective,
+    PipesComponent,
+    HexaPipe,
+    ParamsPipe,
+    LifeCycleComponent
   ],
   imports: [
     BrowserModule,
