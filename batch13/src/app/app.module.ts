@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule,Routes } from '@angular/router'
-
+import {HttpModule} from '@angular/http'
 
 import {FormsModule} from '@angular/forms'
 
@@ -17,6 +17,7 @@ import { PipesComponent } from './pipes/pipes.component';
 import { HexaPipe } from './hexa.pipe';
 import { ParamsPipe } from './params.pipe';
 import { LifeCycleComponent } from './life-cycle/life-cycle.component';
+import { ApisComponent } from './apis/apis.component';
 
 //angular.modue('myAPp', [ngROuter])
 
@@ -39,7 +40,8 @@ const routes:Routes = [
   {path:'form-states', component:FormStatesComponent},
   {path:'object-form', component:ObjectFormsComponent},
   {path:'pipes', component:PipesComponent},
-	{path:'life-cycle', component:LifeCycleComponent},
+  {path:'life-cycle', component:LifeCycleComponent},
+	{path:'api', component:ApisComponent},
 ];
 
 @NgModule({
@@ -55,12 +57,14 @@ const routes:Routes = [
     PipesComponent,
     HexaPipe,
     ParamsPipe,
-    LifeCycleComponent
+    LifeCycleComponent,
+    ApisComponent
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(routes),
-    FormsModule
+    FormsModule,
+    HttpModule
   ],
   providers: [],
   bootstrap: [AppComponent]
