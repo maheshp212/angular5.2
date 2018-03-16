@@ -14,14 +14,16 @@ export class ApisComponent implements OnInit {
   constructor(private user:UsersService) { }
 
   ngOnInit() {
+  	this.listusers();
+  }
 
+  listusers(){
   	this.user.listUsers()
   	.subscribe((res) => {
 		console.log(res);
 		this.users = res.data;
 	});
   }
-
   viewUser(uid){
   	this.user.viewUser(uid)
   	.subscribe((res) => {
@@ -33,12 +35,12 @@ export class ApisComponent implements OnInit {
 		this.user.createUser()
 	  	.subscribe((res) => {
 			this.userInfo = res.data;
-
-			this.user.listUsers()
+			this.listusers();
+			/*this.user.listUsers()
 		  	.subscribe((res) => {
 				console.log(res);
 				this.users = res.data;
-			});
+			});*/
 		});
 	}
 

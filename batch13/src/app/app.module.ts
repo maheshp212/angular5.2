@@ -18,6 +18,8 @@ import { HexaPipe } from './hexa.pipe';
 import { ParamsPipe } from './params.pipe';
 import { LifeCycleComponent } from './life-cycle/life-cycle.component';
 import { ApisComponent } from './apis/apis.component';
+import { HomeComponent } from './home/home.component';
+import { NotfoundComponent } from './notfound/notfound.component';
 
 //angular.modue('myAPp', [ngROuter])
 
@@ -34,14 +36,17 @@ import { ApisComponent } from './apis/apis.component';
 
 
 const routes:Routes = [
+  {path:'', component:HomeComponent},
 	{path:'intro', component:IntroComponent},
   {path:'variables', component:VariablesComponent},
   {path:'directives', component:DirectivesComponent},
   {path:'form-states', component:FormStatesComponent},
   {path:'object-form', component:ObjectFormsComponent},
   {path:'pipes', component:PipesComponent},
-  {path:'life-cycle', component:LifeCycleComponent},
-	{path:'api', component:ApisComponent},
+  {path:'life-cycle/:fname/:lname/:age', component:LifeCycleComponent},
+  {path:'api', component:ApisComponent},
+	{path:'**', component:NotfoundComponent},
+
 ];
 
 @NgModule({
@@ -58,7 +63,9 @@ const routes:Routes = [
     HexaPipe,
     ParamsPipe,
     LifeCycleComponent,
-    ApisComponent
+    ApisComponent,
+    HomeComponent,
+    NotfoundComponent
   ],
   imports: [
     BrowserModule,
