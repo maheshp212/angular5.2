@@ -1,0 +1,61 @@
+header{
+	clear: both;
+	height: 55px;
+	background-color: tomato;
+}
+header .title{
+	float: left;
+	width: 70%;
+	text-align: center;
+}
+header .title h1{
+	margin: 0
+}
+header .logo{
+	float: left;
+	width: 30%;
+}
+nav{
+	    clear: both;
+    height: 18px;
+    background-color: skyblue;
+    padding: 18px;
+}
+nav ul{
+	list-style-type: none;
+	margin: 0;
+}
+ nav ul li {
+ 	float: left;
+
+ }
+ nav ul li a{
+ 	padding: 15px;
+ 	font-size: 16px;
+ 	text-decoration: none;
+ 	color: white;
+ 	font-weight: bold;
+
+ }
+ p{
+ 	margin: 0;
+ }
+  nav ul li a:hover{
+ 	background-color: tomato;
+ 	text-decoration: underline;
+ 	border-radius: 5px;
+ }
+#content{
+	clear: both;
+	min-height: 450px;
+	background-color: #e3e3e3;	
+	padding: 15px;
+}
+footer{
+	clear: both;
+	background-color: tomato;
+	text-align: center;
+	font-style: italic;
+	padding: 15px;
+
+}
