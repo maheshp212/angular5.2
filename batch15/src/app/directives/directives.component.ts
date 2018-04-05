@@ -18,4 +18,8 @@ export class DirectivesComponent implements OnInit {
   	console.log(this.count);
   	this.count++;
   }
+
+  dir(){
+    alert('dir function invoked');
+  }
 }

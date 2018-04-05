@@ -10,5 +10,7 @@ export class IntroComponent {
   constructor() { }
 
   
-
+	intr(){
+		alert('intr function invoked');
+	}
 }

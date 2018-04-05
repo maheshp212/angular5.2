@@ -1,0 +1,40 @@
+<p>
+  pipes works!
+</p>
+<pre>
+	<!--
+		angular 1 filters
+
+		lowercase
+		uppercase
+
+		date
+		currency
+		number
+
+
+		orderBy
+		filter 
+	-->
+	{{fname}}
+	{{fname | lowercase}}
+	{{fname | uppercase}}
+
+	{{age}}
+	{{age | number}}
+	{{age | currency}}
+	{{age | currency:'INR'}}
+	{{age | currency:'&#8377;'}}
+	
+	{{age | hexa}}
+	{{255 | hexa}}
+
+	{{7 | params : 2 : 3 : 5}}
+	{{age | params : 2 : 3 : 5}}
+	{{today}}
+	{{today | date}}
+	{{today | date : 'dd-MM-yy'}}
+	
+	{{user}}
+	{{user|json}}
+</pre>
