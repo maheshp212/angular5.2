@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 import {FormsModule} from '@angular/forms'
+import {HttpModule} from '@angular/http'
 
 import { AppComponent } from './app.component';
 import { IntroComponent } from './intro/intro.component';
@@ -13,6 +14,8 @@ import { HexaPipe } from './hexa.pipe';
 import { ParamsPipe } from './params.pipe';
 import { AttrDirective } from './attr.directive';
 import { ClassDirective } from './class.directive';
+import { LifecycleComponent } from './lifecycle/lifecycle.component';
+import { ApisComponent } from './apis/apis.component';
 
 
 const routes:Routes = [
@@ -20,7 +23,9 @@ const routes:Routes = [
   {path:'variables', component:VariablesComponent},
   {path:'directives', component:DirectivesComponent},
   {path:'form-states', component:FormStatesComponent},
-	{path:'pipes', component:PipesComponent},
+  {path:'pipes', component:PipesComponent},
+  {path:'life-cycel', component:LifecycleComponent},
+	{path:'apis', component:ApisComponent},
 ]
 @NgModule({
   declarations: [
@@ -33,12 +38,15 @@ const routes:Routes = [
     HexaPipe,
     ParamsPipe,
     AttrDirective,
-    ClassDirective
+    ClassDirective,
+    LifecycleComponent,
+    ApisComponent
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(routes),
-    FormsModule
+    FormsModule,
+    HttpModule
   ],
   providers: [],
   bootstrap: [AppComponent]
