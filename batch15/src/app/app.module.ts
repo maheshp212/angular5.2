@@ -16,16 +16,20 @@ import { AttrDirective } from './attr.directive';
 import { ClassDirective } from './class.directive';
 import { LifecycleComponent } from './lifecycle/lifecycle.component';
 import { ApisComponent } from './apis/apis.component';
+import { HomeComponent } from './home/home.component';
+import { NotfoundComponent } from './notfound/notfound.component';
 
 
 const routes:Routes = [
-	{path:'intro', component:IntroComponent},
+  {path:'', component:HomeComponent}, // home
+	{path:'intro/:name/:pid', component:IntroComponent},
   {path:'variables', component:VariablesComponent},
   {path:'directives', component:DirectivesComponent},
   {path:'form-states', component:FormStatesComponent},
   {path:'pipes', component:PipesComponent},
   {path:'life-cycel', component:LifecycleComponent},
-	{path:'apis', component:ApisComponent},
+  {path:'apis', component:ApisComponent},
+	{path:'**', component:NotfoundComponent}, //page not found
 ]
 @NgModule({
   declarations: [
@@ -40,7 +44,9 @@ const routes:Routes = [
     AttrDirective,
     ClassDirective,
     LifecycleComponent,
-    ApisComponent
+    ApisComponent,
+    HomeComponent,
+    NotfoundComponent
   ],
   imports: [
     BrowserModule,
