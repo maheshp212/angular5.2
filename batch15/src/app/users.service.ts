@@ -65,7 +65,7 @@ export class UsersService {
 		.map((resp:Response) => {
 			return resp.json();
 
-		}
+		})
   }
 
 }
