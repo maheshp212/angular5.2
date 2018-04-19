@@ -21,6 +21,8 @@ import { ApisComponent } from './apis/apis.component';
 import { HomeComponent } from './home/home.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 
+import { Ng2SmartTableModule } from 'ng2-smart-table';
+
 //angular.modue('myAPp', [ngROuter])
 
 
@@ -71,7 +73,8 @@ const routes:Routes = [
     BrowserModule,
     RouterModule.forRoot(routes),
     FormsModule,
-    HttpModule
+    HttpModule,
+    Ng2SmartTableModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
