@@ -10,15 +10,14 @@
 </header>
 <nav>
   <ul>
-    <li><a href="#"> about us </a></li>
-    <li><a href="#"> about us </a></li>
-    <li><a href="#"> about us </a></li>
-    <li><a href="#"> about us </a></li>
+    <li><a [routerLink] = "['/intro']" > Intro </a></li>
+    <li><a [routerLink] = "['/variables']" > Variables </a></li>
   </ul>
 </nav>
 <div id="content">
-this is the main contenet
-<h2>Here are some links to help you start: </h2>
+
+  <router-outlet></router-outlet>
+
 </div>
   <footer>
     copy rights
