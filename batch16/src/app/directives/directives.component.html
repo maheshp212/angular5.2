@@ -1,0 +1,57 @@
+<p>
+  directives works!
+</p>
+<pre>
+
+
+</pre>
+
+<!-- <div [appAttr] msg="this is custom mesg" fname="qshore"> this is a custom directive</div>
+
+ -->
+<div [appAttr]="priyanka" msg="this is custom mesg" fname="qshore"> this is a custom directive</div>
+
+
+<pre>
+	{{fname}}
+	{{age}}
+	{{fruits}}
+	{{fruits[1]}}
+</pre>
+
+<p *ngIf="age == 34"> this is if </p>
+<p [hidden]="age == 34"> this is hidden </p>
+
+ 
+<p *ngFor="let fruit of fruits" > {{fruit}} </p>
+
+<ul>
+	<li *ngFor="let fruit of fruits"> {{fruit}} </li>
+</ul>
+
+<select>
+	<option *ngFor="let fruit of fruits"> {{fruit}} </option>
+</select>
+
+<table border="1">
+	<tr *ngFor="let fruit of fruits">
+		<td > {{fruit}} </td>
+	</tr>
+</table>
+
+
+<p [ngSwitch]="age">
+	<span *ngSwitchCase="34"> this is 34</span>
+	<span *ngSwitchCase="40"> this is 40</span>
+	<span *ngSwitchCase="50"> this is 50</span>
+	<span *ngSwitchCase="60"> this is 60</span>
+	<span *ngSwitchDefault > this is default</span>
+</p>
+
+
+<input type="text" name="fname" [(ngModel)]="fname"> {{fname}}
+<pre>
+
+
+
+	</pre>

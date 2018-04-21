@@ -1,0 +1,32 @@
+
+
+<p (click)="callMe()" > thhis is click</p>
+<p (mouseover)="callMe()" > thhis is mouseover</p>
+<p (mouseout)="callMe()" > thhis is mouseout</p>
+<p (mouseenter)="callMe()" > thhis is mousenter</p>
+<p (mouseleave)="callMe()" > thhis ismouseleave</p>
+<p (mousemove)="callMe()" > thhis is mousemove</p>
+<p (dblclick)="callMe()" > thhis is dblclick</p>
+
+<pre>
+	 {{fname}}
+
+<input type="text" name="fname" [(ngModel)]="fname" (click)="callMe()" placeholder="click">	
+
+<input type="text" name="fname" [(ngModel)]="fname" (focus)="callMe()" placeholder="focus">	
+
+<input type="text" name="fname" [(ngModel)]="fname" (blur)="callMe()" placeholder="blur">	
+
+<input type="text" name="fname" [(ngModel)]="fname" (change)="callMe()" placeholder="change">	
+
+<input type="text" name="fname" [(ngModel)]="fname" (copy)="callMe()" placeholder="copy">	
+
+<input type="text" name="fname" [(ngModel)]="fname" (paste)="callMe()" placeholder="paste">	
+
+<input type="text" name="fname" [(ngModel)]="fname" (cut)="callMe()" placeholder="cut">	
+
+<input type="text" name="fname" [(ngModel)]="fname" (keyup)="callMe()" placeholder="keyup">	
+
+<input type="text" name="fname" [(ngModel)]="fname" (keydown)="callMe()" placeholder="keydown"
+>	
+</pre>

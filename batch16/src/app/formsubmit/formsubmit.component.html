@@ -1,0 +1,6 @@
+<form name="form" #f=ngForm (submit)="f.valid && login()" >
+	<input type="text" name="fname" [(ngModel)]="user.fname" #fname=ngModel>  {{user.fname}}
+	
+	<input type="text" name="lname" [(ngModel)]="user.lname" #lname=ngModel required>  {{user.lname}}
+	<input type="submit" value="submit">
+</form>

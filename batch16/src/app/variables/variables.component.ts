@@ -15,6 +15,15 @@ export class VariablesComponent {
 	gender:boolean = true;
 	undf;
 
-	a:number = 2;
-	b:number = 3;
+	a:number;
+	b:number;
+
+	constructor(){
+		this.a = 5;
+		this.b = 6;
+	}
+
+	login(){
+		console.log('this is variable component direvyiv..');
+	}
 }
