@@ -14,6 +14,9 @@ import { FormStatesComponent } from './form-states/form-states.component';
 import { FormsubmitComponent } from './formsubmit/formsubmit.component';
 import { PipesComponent } from './pipes/pipes.component';
 import { AttrDirective } from './attr.directive';
+import { ClassDirective } from './class.directive';
+import { HexaPipe } from './hexa.pipe';
+import { AddParmasPipe } from './add-parmas.pipe';
 
 const routes:Routes = [
     {path:'intro', component:IntroComponent},
@@ -36,7 +39,10 @@ const routes:Routes = [
     FormStatesComponent,
     FormsubmitComponent,
     PipesComponent,
-    AttrDirective
+    AttrDirective,
+    ClassDirective,
+    HexaPipe,
+    AddParmasPipe
   ],
   imports: [
     BrowserModule,

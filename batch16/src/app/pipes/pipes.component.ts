@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PipesComponent implements OnInit {
 	fname:string = 'qShoRE';
-	age:number = 34;
+	age:number = 255;
 	today:any = new Date();
 
   constructor() { }
