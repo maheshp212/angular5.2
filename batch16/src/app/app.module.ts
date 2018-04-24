@@ -17,6 +17,7 @@ import { AttrDirective } from './attr.directive';
 import { ClassDirective } from './class.directive';
 import { HexaPipe } from './hexa.pipe';
 import { AddParmasPipe } from './add-parmas.pipe';
+import { LifeCyclesComponent } from './life-cycles/life-cycles.component';
 
 const routes:Routes = [
     {path:'intro', component:IntroComponent},
@@ -26,6 +27,7 @@ const routes:Routes = [
     {path:'form-states', component:FormStatesComponent},
     {path:'form-submit', component:FormsubmitComponent},
     {path:'pipes', component:PipesComponent},
+    {path:'life-cycles', component:LifeCyclesComponent},
   ];
 
 
@@ -42,7 +44,8 @@ const routes:Routes = [
     AttrDirective,
     ClassDirective,
     HexaPipe,
-    AddParmasPipe
+    AddParmasPipe,
+    LifeCyclesComponent
   ],
   imports: [
     BrowserModule,
