@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {RouterModule, Routes} from '@angular/router'
 import {FormsModule} from '@angular/forms'
-
+import { HttpModule} from '@angular/http'
 
 
 import { AppComponent } from './app.component';
@@ -18,6 +18,7 @@ import { ClassDirective } from './class.directive';
 import { HexaPipe } from './hexa.pipe';
 import { AddParmasPipe } from './add-parmas.pipe';
 import { LifeCyclesComponent } from './life-cycles/life-cycles.component';
+import { ApisComponent } from './apis/apis.component';
 
 const routes:Routes = [
     {path:'intro', component:IntroComponent},
@@ -28,6 +29,7 @@ const routes:Routes = [
     {path:'form-submit', component:FormsubmitComponent},
     {path:'pipes', component:PipesComponent},
     {path:'life-cycles', component:LifeCyclesComponent},
+    {path:'apis', component:ApisComponent},
   ];
 
 
@@ -45,12 +47,14 @@ const routes:Routes = [
     ClassDirective,
     HexaPipe,
     AddParmasPipe,
-    LifeCyclesComponent
+    LifeCyclesComponent,
+    ApisComponent
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(routes),
-    FormsModule
+    FormsModule,
+    HttpModule
   ],
   providers: [],
   bootstrap: [AppComponent]
