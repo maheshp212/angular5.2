@@ -1,0 +1,55 @@
+const routes: Routes = [
+  { path: '', canActivate: [AuthGuard], component: DashboardLayoutComponent,
+    children: [
+      { path: 'dashboard/s', component: SuperAccountComponent },
+      { path: 'category', component: CategoryComponent},
+    ]
+  },
+
+  // Dfault Layout for pages
+  { path: '', component: DefaultLayoutComponent,
+    children: [
+      { path: 'about', component: AboutComponent },
+      { path: 'features', component: FeaturesComponent },
+    ]
+  },
+ ];
+
+export const routing = RouterModule.forRoot(routes);
+
+
+
+
+
+###############################
+
+
+import { Injectable } from '@angular/core';
+import { Router, CanActivate } from '@angular/router';
+import { Global } from './../global';
+
+
+@Injectable()
+export class AuthGuard implements CanActivate {
+
+    constructor(private router: Router) { }
+
+    canActivate() {
+
+        let retrievedData = localStorage.getItem('currentUser');
+        if (retrievedData) {
+            let userdata = JSON.parse(retrievedData);
+            if (parseInt(userdata.user_role_id, 0) === Global.role.superAdmin) {
+             // navigate to superadmin dashboard
+              // this.router.navigate(['/dashboard/s']);
+              return true;
+          }
+      }
+
+        // not logged in so redirect to login page
+        this.router.navigate(['/login']);
+        return false;
+    }
+}
+
+#########################
